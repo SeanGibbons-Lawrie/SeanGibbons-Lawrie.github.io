@@ -37,11 +37,6 @@
   margin: 50px 40px 10px 40px;
 }
 
-#templatepic {
-  width: 30%;
-  height: 30%;
-}
-
 @media only screen and (max-width: 768px) {
   #home {
     margin: 100px 10px 0px 10px;

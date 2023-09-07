@@ -32,6 +32,11 @@
   margin: 100px 100px 0px 100px;
 }
 
+#post {
+  font-size: 14px;
+  margin: 50px 40px 10px 40px;
+}
+
 #templatepic {
   width: 30%;
   height: 30%;
@@ -43,5 +48,8 @@
   }
   #about {
     margin: 50px 10px 0px 10px;
+  }
+  #post {
+    margin: 50px 10px 10px 10px;
   }
 }

@@ -16,10 +16,13 @@
 
 .text {
   display: flex;
-  position: relative;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   justify-content: center;
+}
+
+.positioningp {
+  padding-left: 20px;
 }
 
 #home {
@@ -33,6 +36,7 @@
 }
 
 #post {
+  position: relative;
   font-size: 14px;
   margin: 50px 40px 10px 40px;
 }

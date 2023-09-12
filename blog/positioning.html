@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../styles/main.css" rel="stylesheet" type="text/css">
+        <title>Positioning</title>
+    </head>
+    <body>
+      <nav class="navbar navbar-expand-lg fixed-top navbarScroll">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">Sean Gibbons-Lawrie</a>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                </ul>
+        </div>
+    </nav>
+    <section id="home" class="text">
+      Positioning with CSS
+    </section> 
+        <section id="post">
+          <div class="text">
+            <p>The basics of each positioning type are as follows:
+            <ul>
+              <li>Static - this is the default value, all elements are in order as they appear in the document.</li>
+              <li>Relative - the element is positioned relative to its normal position.</li>
+              <li>Absolute - the element is positioned absolutely to its first positioned parent.</li>
+              <li>Fixed - the element is positioned related to the browser window.</li>
+              <li>Sticky - the element is positioned related to the parent element.</li>
+            </ul>
+          </p>
+          </div>
+        </section>
+        <br><br>
+        <section id="post">
+            <div class="text"> 
+              <h1>Position Relative: </h1>
+                <p>
+                  Works almost the same as static, but it allows you to change the top, left, right and bottom. 
+                  So its position is the same as static apart from how you declare it to be altered directionally. 
+                  These alterations remove the element from the document flow, it is moved to the specified position, 
+                  Not affecting other elements position. The static location is reserved for it however. 
+                  In general it is not used for top, left, right and bottom.
+                  Instead it's used to contain other positioning elements like absolute.
+                </p>
+          </div>
+        </section>
+        <section id="post">
+          <div class="text"> 
+            <h1>Position Absolute: </h1>
+              <p>
+                Completely removes that object from the document flow and everything else renders as if it doesn't exist.
+                Therefore by default it will position itself in the utmost top-left of the page, overlapping other elements.
+                It is really useful when you want an element in a specific position and nothing else to move around it.
+                Absolute looks for the closest ancestor which is not position default to provide a containing block,
+                generally this is what position relative provides.
+                Once something becomes position absolute and it finds something that is it's containing block
+                it is not looking at the content block anymore it is now looking at the padding block.
+              </p>
+        </div>
+      </section>
+      <section id="post">
+        <div class="text"> 
+          <h1>Position Fixed: </h1>
+            <p>
+              A position fixed default behaviour always looks at the viewport, so any bottom: 1rem; 
+              is always going to be positioned relative to the viewport. It's containing block is the viewport. 
+              The problem with position fixed are there are certain situations, if it is placed within a footer for example. 
+              It can't look at the viewport, it will be fixed to the footer and can't move outside of it.
+              There are some weird edge cases when a parent element has transform, backdrop-filter or perspective 
+              the position fixed element can get stuck within that containing block.
+              The solution in these cases is to move the position fixed outside of whatever is causing the problem.
+              My understanding is that you generally want these elements outside of any parent elements 
+              so that they can track on your page relative to the viewport.
+            </p>
+      </div>
+      </section>
+      <section id="post">
+        <div class="text"> 
+          <h1>Position Sticky: </h1>
+            <p>
+              When you scroll, a position sticky element should stick in position with it's content block. 
+              The containing block doesnt change so you have to be careful if the containing block is very tall, 
+              you can check if this is the case by declaring a background colour on the sticky element.
+              It's also important that the parent containing block is tall so it has something it can stick inside of. 
+              You can add a border on this parent containing block to see how far down the sticky element can go.
+            </p>
+      </div>
+      </section>
+    </body>
+</html>
